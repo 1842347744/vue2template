@@ -5,9 +5,23 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <Loading v-show="isLoading"/>
   </div>
 </template>
 
+<script>
+  import { mapState } from 'vuex';
+  import Loading from '@/components/common/Loading';
+
+  export default {
+    computed:{
+      ...mapState(['isLoading'])
+    },
+    components: {
+      Loading
+    },
+  }
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -30,3 +44,4 @@
   }
 }
 </style>
+
