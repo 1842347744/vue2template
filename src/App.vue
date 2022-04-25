@@ -4,23 +4,23 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
-    <Loading v-show="isLoading"/>
+    <router-view />
+    <Loading v-show="isLoading" />
   </div>
 </template>
 
 <script>
-  import { mapState } from 'vuex';
-  import Loading from '@/components/common/Loading';
+import { mapState } from "vuex";
+import Loading from "@/components/common/Loading";
 
-  export default {
-    computed:{
-      ...mapState(['isLoading'])
-    },
-    components: {
-      Loading
-    },
-  }
+export default {
+  computed: {
+    ...mapState(["isLoading"]),
+  },
+  components: {
+    Loading,
+  },
+};
 </script>
 <style lang="scss">
 #app {
@@ -44,4 +44,3 @@
   }
 }
 </style>
-
